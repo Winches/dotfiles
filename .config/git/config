@@ -1,0 +1,75 @@
+[user]
+    name = green
+    email = green.norton@gmail.com
+
+[init]
+    defaultBranch = master
+
+[core]
+    pager = delta         # use git-delta
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[pull]
+    rebase = false
+
+[push]
+    autoSetupRemote = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+    renames = true        # Show renames/moves as such
+
+[color]
+    ui = auto
+
+[color "branch"]
+    current = green reverse
+    local = white
+    remote = cyan
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[color "diff"]
+    meta = yellow
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    commit = yellow bold
+    whitespace = red reverse
+
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
+
+[delta]
+    features = chameleon  # theme
+    navigate = true       # use n and N to move between diff sections
+    side-by-side = true   # active line-numbers by default
+
+[safe]
+    directory = ~/repos
+
+[alias]
+    # List things
+    tags = "tag -l"
+    branches = "branch -a"
+    remotes = "remote -v"
+
+[include]
+    path = themes.gitconfig

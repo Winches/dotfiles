@@ -1,0 +1,56 @@
+## nanorc
+## see sample file at /etc/nanorc
+
+## Automatically indent a newly created line to the same number of
+## tabs and/or spaces as the preceding line -- or as the next line
+## if the preceding line is the beginning of a paragraph.
+set autoindent
+
+## The characters treated as closing brackets when justifying paragraphs.
+## This may not include any blank characters.  Only closing punctuation,
+## optionally followed by these closing brackets, can end sentences.
+set brackets ""')>]}"
+
+## Constantly display the cursor position in the status bar or minibar.
+set constantshow
+
+## Display line numbers to the left (and any anchors in the margin).
+#set linenumbers # status bar include line info with "set constantshow"
+
+## Use this tab size instead of the default; it must be greater than 0.
+set tabsize 4
+
+## Convert each typed tab to the fitting number of spaces.
+set tabstospaces
+
+## Remember the cursor position in each file for the next editing session.
+set positionlog
+
+## Put the cursor on the highlighted item in the file browser, and
+## show the cursor in the help viewer; useful for people who use a
+## braille display and people with poor vision.
+set showcursor
+
+## Don't display the helpful shortcut lists at the bottom of the screen.
+set nohelp
+
+## Use the end of the title bar for some state flags: I = auto-indenting,
+## M = mark, L = hard-wrapping long lines, R = recording, S = soft-wrapping.
+set stateflags
+
+## === Syntax coloring ===
+include /usr/share/nano/*.nanorc
+
+## Paint the interface elements of nano.  These are examples; there are
+## no colors by default, except for errorcolor and spotlightcolor.
+#set titlecolor bold,white,blue
+set promptcolor lightwhite,grey
+#set statuscolor bold,white,green
+set errorcolor bold,white,red
+set spotlightcolor black,lightyellow
+set selectedcolor lightwhite,magenta
+set stripecolor ,yellow
+set scrollercolor cyan
+set numbercolor cyan
+set keycolor cyan
+set functioncolor green

@@ -1,0 +1,12 @@
+#!/usr/bin/sh
+
+DIR="$(cd "$(dirname "$0")" && pwd)"
+## ENV
+test -r $DIR/env.sh && source $DIR/env.sh
+
+## ALIASES, FUNCTIONS
+for file in $DIR/*.sh; do
+    if [ $(basename $file) != "env.sh" ]; then
+        source $file
+    fi
+done

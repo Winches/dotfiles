@@ -1,0 +1,6 @@
+*.log
+history.txt
+.version
+.firstrun
+.last_change_time
+/wallpaper/*

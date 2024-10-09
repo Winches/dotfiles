@@ -1,0 +1,71 @@
+# https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
+
+# Config relating to the Lazygit UI
+gui:
+  # One of 'auto' (default) | 'en' | 'zh-CN' | 'zh-TW' | 'pl' | 'nl' | 'ja' | 'ko' | 'ru'
+  language: 'en'
+
+  # Config relating to colors and styles.
+  # theme from https://github.com/catppuccin/lazygit
+  theme:
+    activeBorderColor:
+      - '#a6e3a1'
+      - bold
+    inactiveBorderColor:
+      - '#a6adc8'
+    optionsTextColor:
+      - '#89b4fa'
+    selectedLineBgColor:
+      - '#313244'
+    cherryPickedCommitBgColor:
+      - '#45475a'
+    cherryPickedCommitFgColor:
+      - '#a6e3a1'
+    unstagedChangesColor:
+      - '#f38ba8'
+    defaultFgColor:
+      - '#cdd6f4'
+    searchingActiveBorderColor:
+      - '#f9e2af'
+
+  authorColors:
+    '*': '#b4befe'
+
+# Config relating to git
+git:
+  # Config for showing the log in the commits view
+  log:
+    # One of: 'date-order' | 'author-date-order' | 'topo-order' | 'default'
+    # 'topo-order' makes it easier to read the git log graph, but commits may not
+    # appear chronologically. See https://git-scm.com/docs/
+    #
+    # Deprecated: Configure this with `Log menu -> Commit sort order` (<c-l> in the commits window by default).
+    order: topo-order
+
+    # This determines whether the git graph is rendered in the commits panel
+    # One of 'always' | 'never' | 'when-maximised'
+    #
+    # Deprecated: Configure this with `Log menu -> Show git graph` (<c-l> in the commits window by default).
+    showGraph: when-maximised
+
+    # displays the whole git graph by default in the commits view (equivalent to passing the `--all` argument to `git log`)
+    showWholeGraph: false
+
+# Periodic update checks
+update:
+  # One of: 'prompt' (default) | 'background' | 'never'
+  method: prompt
+
+  # Period in days between update checks
+  days: 14
+
+# If true, show a confirmation popup before quitting Lazygit
+confirmOnQuit: false
+
+# If true, don't display introductory popups upon opening Lazygit.
+disableStartupPopups: true
+
+# Keybindings
+keybinding:
+  universal:
+    quit: "q"
