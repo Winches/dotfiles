@@ -47,7 +47,7 @@ if is_wsl ; then
 
     # Wrap the git command to either run windows git or linux
     git() {
-        if in_directory /mnt; then
+        if in_directory /mnt && [[ $(df -T $PWD | awk 'NR>1 {print $2}') == "9p" ]]; then
             git.exe "$@"
         else
             /usr/bin/git "$@"
