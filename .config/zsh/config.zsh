@@ -43,7 +43,7 @@ post_configure () {
 # oh-my-zsh
 ZSH_THEME="robbyrussell"
 zstyle ':omz:update' mode reminder                     # update mode
-zstyle ':omz:update' frequency 7                       # update frequency(days)
+zstyle ':omz:update' frequency 30                      # update frequency(days)
 # zsh-autosuggestions
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244,bold"          # style of auto suggestions
 # zsh-z
